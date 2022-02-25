@@ -7,10 +7,19 @@ const updateUI = (data,city) => {
     const temperature = data[0].Temperature;
     const weatherText = data[0].WeatherText;
     const weatherIcon = data[0].WeatherIcon;
-    
+    console.log(data);
     /* IF LOOPS AND ADDING IMAGE ACCORDING TO WEATHER CONDITION AND INJECTING HTML */
     
     imgContainer.style.display = 'block';
+    const html = `
+       <p>City : ${city.toUpperCase()}</p>
+       <p>Temperature : ${temperature.Metric.Value}&deg;C</p>
+       <p>Weather Condition : ${weatherText}</p>
+       <p>Date & Time : ${data[0].LocalObservationDateTime}</p>
+    `;
+    dataDisplay.innerHTML = html;
+    dataDisplay.style.display = 'block';
+    
      
 };
 form.addEventListener('submit', (data) => {
@@ -24,6 +33,10 @@ form.addEventListener('submit', (data) => {
     }).then((data) => {
         updateUI(data,city);
     }).catch((err) => {
-        console.log(err.message);
+        const text = err.Message;
+        dataDisplay.innerHTML = `
+        <p>${text}
+        <h3>NOTE : Please check your city name.</h3>
+        `;
     });
 });
