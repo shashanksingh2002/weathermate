@@ -10,7 +10,7 @@ body{
     background-size:auto;
     background-repeat: no-repeat;
     outline:2px solid red;
-    width:50vw;
+    width:80vw;
     margin:3rem auto;
     display:flex;
     flex-wrap: wrap;
