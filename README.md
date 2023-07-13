@@ -56,7 +56,7 @@
 
   <h2>Contact</h2>
   <p>
-    For any questions or feedback, please contact <a href="mailto:shashanksingh.co243@example.com">weathermatejs@gmail.com</a>.
+    For any questions or feedback, please contact <a href="mailto:shashanksingh.co243@example.com">shashanksingh@gmail.com</a>.
   </p>
 </body>
 
